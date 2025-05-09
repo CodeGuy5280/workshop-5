@@ -11,12 +11,15 @@ public class Dealership {
 
     private ArrayList<Vehicle>inventory;
 
-    public Dealership(){
+    public Dealership(String name, String address, String phone) {
+        this.name = name;
+        this.address = address;
+        this.phone = phone;
         this.inventory = new ArrayList<Vehicle>();
     }
 
     public ArrayList<Vehicle> getAllVehicles() {
-        return null;
+        return inventory;
     }
 
 
@@ -51,8 +54,8 @@ public class Dealership {
 
 
     //add vehicle
-    public void addVehicle(){
-
+    public void addVehicle(Vehicle vehicle) {
+        inventory.add(vehicle);
     }
     //remove vehicle
     public void removeVehicle(){
