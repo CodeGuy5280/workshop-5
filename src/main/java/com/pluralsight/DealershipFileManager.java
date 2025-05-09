@@ -3,11 +3,12 @@ package com.pluralsight;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class DealershipFileManager {
-
-    public void getDealership(String filePath, Dealership dealership) {
-        try (BufferedReader csvReader = new BufferedReader(new FileReader(filePath))) {
+    public Dealership getDealership(String filePath) {
+        Dealership dealership = new Dealership("Automotive1", "450 E Vermont St", "303-445-6321");
+        try (BufferedReader csvReader = new BufferedReader(new FileReader("inventory.csv"))) {
             String line;
             while ((line = csvReader.readLine()) != null) {
                 String[] fields = line.split("\\|");
@@ -30,5 +31,10 @@ public class DealershipFileManager {
         } catch (NumberFormatException e) {
             System.out.println("Invalid number format in CSV: " + e.getMessage());
         }
+        return dealership;
+    }
+    //save dealership
+    public ArrayList<Vehicle> saveDealership(){
+        return null;
     }
 }
