@@ -40,7 +40,7 @@ public class Dealership {
     }
 
 
-    private ArrayList<Vehicle>getVehicleByMilage(){
+    private ArrayList<Vehicle>getVehicleByMileage(){
         return null;
     }
 
@@ -51,7 +51,11 @@ public class Dealership {
 
 
     //add vehicle
+    public void addVehicle(){
 
+    }
     //remove vehicle
+    public void removeVehicle(){
 
+    }
 }

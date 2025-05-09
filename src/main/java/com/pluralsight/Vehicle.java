@@ -12,8 +12,10 @@ public class Vehicle {
     int odometer;
     double price;
 
+//constructor
 Vehicle vehicle = new Vehicle();
 
+//getters
     public int getVin() {
         return vin;
     }
