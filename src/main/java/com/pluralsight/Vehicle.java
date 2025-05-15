@@ -89,4 +89,10 @@ Vehicle vehicle = new Vehicle(314313, 2005, "Ford", "Explorer", "SUV", "black", 
     public String getVehicleType() {
         return vehicleType;
     }
+    @Override
+    public String toString() {
+        return year + " " + make + " " + model + " | Type: " + vehicleType + " | Color: " + color +
+                " | Odometer: " + odometer + " | Price: $" + price + " | VIN: " + vin;
+    }
+
 }
