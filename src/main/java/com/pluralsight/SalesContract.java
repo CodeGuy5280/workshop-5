@@ -1,9 +1,9 @@
 package com.pluralsight;
 
 public class SalesContract extends Contract {
-    private double salesTaxAmount;
+    private final double salesTaxAmount;
     private final double recordingFee = 100.0;
-    private double processingFee;
+    private final double processingFee;
     private boolean isFinanced;
 
     public SalesContract(String date, String customerName, String customerEmail, Vehicle vehicle, boolean isFinanced) {
