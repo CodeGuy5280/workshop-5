@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class DealershipFileManager {
     public Dealership getDealership(String filePath) {
         Dealership dealership = new Dealership("Automotive1", "450 E Vermont St", "303-445-6321");
-        try (BufferedReader csvReader = new BufferedReader(new FileReader("inventory.csv"))) {
+        try (BufferedReader csvReader = new BufferedReader(new FileReader(filePath))) {
             String line;
             while ((line = csvReader.readLine()) != null) {
                 String[] fields = line.split("\\|");
